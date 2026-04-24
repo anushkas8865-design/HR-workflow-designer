@@ -1,6 +1,11 @@
 # HR Workflow Designer (React + React Flow)
 
-## 📌 Overview
+## Live Application
+
+The project has been successfully deployed and is accessible online:
+hr-workflow-designer-mpic.vercel.app
+
+## Overview
 
 This project is a **mini HR Workflow Designer** that allows users to visually design, configure, and simulate workflows such as onboarding, approvals, and automated processes.
 
@@ -50,7 +55,7 @@ src/
 
 ---
 
-## 📸 Screenshots
+## Screenshots
 
 ### Workflow Canvas
 ![Canvas](./screenshots/1-canvas.png)
@@ -236,7 +241,7 @@ Instead of iterating nodes directly, simulation:
 
 ---
 
-## 🧩Key Highlight
+## Key Highlight
 
 A major challenge solved was ensuring **correct workflow execution after node deletion and undo**, which required:
 
