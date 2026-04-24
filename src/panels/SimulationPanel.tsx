@@ -30,11 +30,11 @@ function SimulationPanel({ nodes, edges }: any) {
 
   // ✅ GET CONNECTED NODES
   const getConnectedNodes = (nodes: any[], edges: any[]) => {
-    const start = nodes.find((n) => n.type === "start");
+    const start = nodes.find((n: any) => n.type === "start");
     if (!start) return [];
 
     const visited = new Set<string>();
-    const queue = [start.id];
+    const queue: string[] = [start.id];
 
     while (queue.length > 0) {
       const current = queue.shift();
@@ -42,11 +42,13 @@ function SimulationPanel({ nodes, edges }: any) {
 
       visited.add(current);
 
+      // ✅ FIX: added explicit type
       const nextEdges = edges.filter((e: any) => e.source === current);
+
       nextEdges.forEach((e: any) => queue.push(e.target));
     }
 
-    return nodes.filter((n) => visited.has(n.id));
+    return nodes.filter((n: any) => visited.has(n.id));
   };
 
   const runSimulation = async () => {
@@ -57,16 +59,16 @@ function SimulationPanel({ nodes, edges }: any) {
     // ✅ FILTER CONNECTED NODES
     const connectedNodes = getConnectedNodes(nodes, edges);
 
-    // 🔥 NEW: FILTER CONNECTED EDGES
+    // ✅ FIX: added explicit type for 'e'
     const connectedEdges = edges.filter(
-      (e) =>
-        connectedNodes.some((n) => n.id === e.source) &&
-        connectedNodes.some((n) => n.id === e.target)
+      (e: any) =>
+        connectedNodes.some((n: any) => n.id === e.source) &&
+        connectedNodes.some((n: any) => n.id === e.target)
     );
 
     const workflow = {
       nodes: connectedNodes,
-      edges: connectedEdges,   // ✅ FIXED
+      edges: connectedEdges,
     };
 
     try {
