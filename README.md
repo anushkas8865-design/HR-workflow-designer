@@ -50,6 +50,26 @@ src/
 
 ---
 
+## 📸 Screenshots
+
+### Workflow Canvas
+![Canvas](./screenshots/1-canvas.png)
+
+### Node Configuration
+![Config](./screenshots/2-node-config.png)
+
+### Automation Selection
+![Automation](./screenshots/3-automation.png)
+
+### Delete Popup
+![Delete](./screenshots/4-delete-popup.png)
+
+### Undo Feature
+![Undo](./screenshots/5-undo.png)
+
+### After Undo Fix
+![After Undo](./screenshots/6-after-undo.png)
+
 ## How to Run
 
 ### 1. Install dependencies
